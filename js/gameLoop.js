@@ -6,5 +6,6 @@ var mainGameLoop = window.setInterval(function() {
     update("perclickupgrade", format(game.orePerClickAdd, "scientific") + "+" + " ore" + " Cost: " + format(game.orePerClickCost, "scientific") + " ore")
     update("perclickupgrademultiplier", "2x Multiplier " + "Cost: " + format(game.orePerClickMultiplierCost, "scientific") + " ore")
     update("oreminedpersec", format(game.orePerClick, "scientific") + " ore per one second")
-  }, 33)
+    update("perclickupgradeexponent", "^2" + " ores " + "Cost: " + format(game.orePerClickExponentCost, "scientific") + " ore")
+  }, 33) 
   
