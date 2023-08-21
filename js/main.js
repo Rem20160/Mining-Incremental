@@ -40,6 +40,35 @@ var game = {
       game.orePerClickAdd *= game.orePerClickAdd
     }
   }
+
+  function buyUpgrade_1() {
+    if (game.ore >= 100) {
+      game.ore -= 100
+      game.orePerClick += 10
+      btn1 = document.getElementById("Upgrade_1btn");
+      btn1.disabled = true;
+      btn1.innerHTML = "10+" + " ore " + " Bought"
+    }
+  }
+
+  function buyUpgrade_2() {
+    if (game.ore >= 10000) {
+      game.ore -= 10000
+      game.orePerClick *=10
+      btn2 = document.getElementById("Upgrade_2btn");
+      btn2.disabled = true;
+      btn2.innerHTML = "10x Multiplier" + " Bought"
+    }
+  }
+
+  function buyUpgrade_3() {
+    if (game.ore >= 10000000)
+    game.ore -= 10000000
+    game.orePerClick = Math.pow(game.orePerClick, 1.5)
+    btn3 = document.getElementById("Upgrade_3btn");
+    btn3.disabled = true;
+    btn3.innerHTML = "^1.5 ore" + " Bought"
+  }
   
   function format(number, type) {
     let exponent = Math.floor(Math.log10(number))
@@ -51,4 +80,14 @@ var game = {
 
   function deletesavefile() {
     localStorage.removeItem("oreminerSave")
+  }
+
+  confirmation = document.getElementById("confirmation");
+  
+  function openConfirmation() {
+    confirmation.classList.add("open-confirmation");
+  }
+
+  function closeConfirmation() {
+    confirmation.classList.remove("open-confirmation");
   }
