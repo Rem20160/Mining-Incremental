@@ -31,6 +31,15 @@ var game = {
       game.orePerClickAdd *= 2
     }
   }
+
+  function buyoresperclickexponent() {
+    if (game.ore >= game.orePerClickExponentCost) {
+      game.ore -= game.orePerClickExponentCost
+      game.orePerClick *= game.orePerClick
+      game.orePerClickExponentCost *= game.orePerClickExponentCost
+      game.orePerClickAdd *= game.orePerClickAdd
+    }
+  }
   
   function format(number, type) {
     let exponent = Math.floor(Math.log10(number))
