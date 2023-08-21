@@ -28,18 +28,19 @@
    <div class="button">
 
     <button onclick="mine()">Mine</button>
-
     </div>
 
    <div class="upgrade">
 
     <button onclick="buyoresperclick()" id="perclickupgrade">Cost: 10 ore</button>
+    <button onclick="buyUpgrade_1()" id="Upgrade_1btn">10+ ore Cost: 100 ore</button>
   
    </div>
    
    <div class="upgrade2">
 
     <button onclick="buyoresperclickmultiplier()" id="perclickupgrademultiplier">2x Multiplier Cost: 1000 ore</button>
+    <button onclick="buyUpgrade_2()" id="Upgrade_2btn">10x Multiplier Cost: 10000 ore</button>
 
 </div>
 
@@ -47,12 +48,17 @@
 
         <button onclick="buyoresperclickexponent()" id="perclickupgradeexponent">2^ ores Cost: 1000000 ore</button>
 
+        <button onclick="buyUpgrade_3()" id="Upgrade_3btn">^1.5 Cost: 1.00e8 ore</button>
+
     </div>
 
    <div>
-    <button onclick="deletesavefile()">Hard reset</button>
-   </div>
-   </div>
+    <button onclick="openConfirmation()">Hard reset</button>
+    <div class="confirmation" id="confirmation">
+        <h2>Do you really want to hard reset?</h2>
+        <p>If yes, Reload after hard reset and wait 15 seconds then reload again for NaN to clear</p>
+        <button onclick="deletesavefile()">Yes</button> <button onclick="closeConfirmation()">No</button>
+    </div>
 </body>
 <script src="js/main.js"></script>
 <script src="js/gameLoop.js"></script>
