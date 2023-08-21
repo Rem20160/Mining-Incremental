@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Mine</title>
+</head>
+<body>
+    <div class="Title">
+
+        <span>Mine</span>
+
+    </div>
+
+   <div id="#mine"> 
+   <div class="currency">
+
+    <span id="oremined">0 ores</span>
+
+   </div>
+   
+   <div class="currencypersec">
+
+   <span id="oreminedpersec">1 ore per one second</span>
+
+   </div>
+
+   <div class="button">
+
+    <button onclick="mine()">Mine</button>
+
+    </div>
+
+   <div class="upgrade">
+
+    <button onclick="buyoresperclick()" id="perclickupgrade">Cost: 10 ore</button>
+  
+   </div>
+   
+   <div class="upgrade2">
+
+    <button onclick="buyoresperclickmultiplier()" id="perclickupgrademultiplier">2x Multiplier Cost: 1000 ore</button>
+
+</div>
+
+   <div>
+    <button onclick="deletesavefile()">Hard reset</button>
+   </div>
+   </div>
+</body>
+<script src="js/main.js"></script>
+<script src="js/gameLoop.js"></script>
+<script src="js/saveGame.js"></script>
+</html>
